@@ -1,5 +1,6 @@
 #!/usr/bin/env pypy
-import timeit, sys
+import timeit
+import sys
 
 
 def main():
@@ -7,7 +8,7 @@ def main():
     triangle_numbers = triangle_numbers_to(int(sys.argv[1]))
 
     for i in range(0, 10):
-        print triangle_numbers[i]
+        print(triangle_numbers[i])
     '''
     for t in triangle_numbers:
         divisors = []
@@ -21,6 +22,7 @@ def main():
                 print "Length of divisor array was: " + str(len(divisors))
                 return
     '''
+
 
 def triangle_numbers_to(n):
     triangles = []

@@ -1,14 +1,13 @@
 #!/usr/bin/env pypy
 import timeit
 
+
 def main():
     primes = [2]
-    current_highest = 3
     
     for n in range(3, 120000, 2):
         
-        if (n > 3 and n % 3 == 0 or n > 5 and n % 5 == 0 or
-            n > 7 and n % 7 == 0):
+        if n > 3 and n % 3 == 0 or n > 5 and n % 5 == 0 or n > 7 and n % 7 == 0:
             pass
         else:
             is_prime = True

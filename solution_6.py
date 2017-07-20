@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+
 def main():
     num_range = range(1, 101)
     sum_of_square = []
@@ -10,9 +11,9 @@ def main():
     
     square_of_sum = (sum(num_range))**2
 
-    print sum_of_square
-    print square_of_sum
-    print square_of_sum - sum_of_square
+    print(sum_of_square)
+    print(square_of_sum)
+    print(square_of_sum - sum_of_square)
 
 
 if __name__ == "__main__":
