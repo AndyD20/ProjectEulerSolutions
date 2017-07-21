@@ -1,34 +1,34 @@
-#!/usr/bin/env pypy
+#!/usr/bin/env python
 import timeit
 import sys
+import math
 
 
 def main():
 
-    triangle_numbers = triangle_numbers_to(int(sys.argv[1]))
+    number = 0
+    i = 1
 
-    for i in range(0, 10):
-        print(triangle_numbers[i])
-    '''
-    for t in triangle_numbers:
-        divisors = []
-        for i in range (1, int(sys.argv[1])):
-            if t % i == 0:
-                divisors.append(i)
-            
-            if len(divisors) > 500:
-                print "Solution is: " + str(t)
-                print "Index of the triangle number is: " + str(triangle_numbers.index(t))
-                print "Length of divisor array was: " + str(len(divisors))
-                return
-    '''
+    while number_of_divisors(number) < 500:
+        number += i
+        i += 1
+
+    print("The first triangle number with over 500 divisors is: " + str(number))
 
 
-def triangle_numbers_to(n):
-    triangles = []
-    for i in range(1, n):
-        triangles.append(i*(i+1)/2)
-    return triangles
+def number_of_divisors(number):
+    nod = 0
+    sqrt = int(math.sqrt(number))
+
+    for i in range(1, sqrt + 1):
+        if number % i == 0:
+            nod += 2
+
+    if sqrt * sqrt == number:
+        nod -= 1
+
+    return nod
+
 
 if __name__ == "__main__":
     start_time = timeit.default_timer()
